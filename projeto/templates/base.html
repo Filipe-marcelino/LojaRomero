@@ -1,0 +1,22 @@
+<!-- Esta é a base de todas as páginas html. As partes únicas de cada página podem ser adicionadas entre o block e o endblock -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %} {% endblock %}</title>
+</head>
+<body>
+    <header>
+        <a href="cadastro">Cadastro</a>
+        <a href="carrinho">Carrinho</a>
+        <a href="index">Home</a>
+        <a href="login">Login</a>
+        <a href="produtos">Produtos</a>
+    </header>
+    {% block conteudo %}
+
+
+    {% endblock %}
+</body>
+</html>
