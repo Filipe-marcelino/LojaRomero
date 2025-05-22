@@ -1,0 +1,15 @@
+<!-- EXPLICAÇÃO: ...-->
+{% extends 'base.html' %}
+{% block titulo %} Produtos {% endblock %}
+
+{% block conteudo %}
+<h2>Escolha os livros:</h2>
+
+<form action="{{ url_for('produtos') }}" method="POST">
+  {% for produto in produtos %}
+    <input type="checkbox" name="produto_id" value="{{ produto.id }}"> {{ produto.nome }} — R$ {{ produto.preco }}<br>
+  {% endfor %}
+  <br>
+  <input type="submit" value="Adicionar ao carrinho">
+</form>
+{% endblock %}
